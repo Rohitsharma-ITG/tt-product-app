@@ -1,0 +1,275 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+model card_images {
+  id          Int       @id @default(autoincrement())
+  account_id  Int
+  game_id     Int?      @default(0)
+  group_token String?   @db.VarChar(64)
+  card_side   String?   @db.VarChar(64)
+  tmp         String?   @db.VarChar(255)
+  domain      String?   @db.VarChar(255)
+  path        String?   @db.VarChar(255)
+  name        String    @db.VarChar(255)
+  thumbnail   String?   @db.VarChar(255)
+  type        String    @db.VarChar(100)
+  sort_order  Int?      @default(0)
+  status      Int       @default(1) @db.SmallInt
+  size        String?   @db.VarChar(255)
+  created_at  DateTime  @default(now()) @db.Timestamp(0)
+  updated_at  DateTime  @updatedAt @db.Timestamp(0)
+  deleted_at  DateTime? @db.Timestamp(0)
+
+  @@index([account_id], map: "card_images_account_id_index")
+  @@index([created_at], map: "card_images_created_at_index")
+  @@index([deleted_at], map: "card_images_deleted_at_index")
+  @@index([domain], map: "card_images_domain_index")
+  @@index([game_id], map: "card_images_game_id_index")
+  @@index([name], map: "card_images_name_index")
+  @@index([path], map: "card_images_path_index")
+  @@index([status], map: "card_images_status_index")
+  @@index([tmp], map: "card_images_tmp_index")
+  @@index([type], map: "card_images_type_index")
+}
+
+model card_likes {
+  card_id     Int
+  customer_id Int
+  created_at  DateTime @default(now()) @db.Timestamp(0)
+
+  @@id([card_id, customer_id])
+  @@index([card_id], map: "card_likes_card_id_index")
+  @@index([created_at], map: "card_likes_created_at_index")
+  @@index([customer_id], map: "card_likes_customer_id_index")
+}
+
+model cards {
+  id                     Int       @id @default(autoincrement())
+  auth_key               String    @db.VarChar(32)
+  type                   Int       @default(0)
+  status                 Int       @default(0) @db.SmallInt
+  language               String?   @default("en-US") @db.VarChar(10)
+  game_id                Int
+  customer_id            Int?
+  character_name         String    @db.VarChar(30)
+  character_class        String?   @db.VarChar(30)
+  character_effect       String?   @db.VarChar(30)
+  custom_description     Int       @default(0) @db.SmallInt
+  character_description  String?   @db.VarChar(2000)
+  character_image        String?   @db.VarChar(2000)
+  uploaded_image_url     String?   @db.VarChar(2000)
+  image_cropbox          String?   @db.VarChar(255)
+  character_display_name String?   @db.VarChar(50)
+  card_image             String?   @db.VarChar(2000)
+  like_count             Int       @default(0)
+  card_options           Json?     @db.Json
+  created_at             DateTime  @default(now()) @db.Timestamp(0)
+  updated_at             DateTime  @updatedAt @db.Timestamp(0)
+  deleted_at             DateTime? @db.Timestamp(0)
+
+  @@index([auth_key], map: "cards_auth_key_index")
+  @@index([customer_id], map: "cards_customer_id_index")
+  @@index([deleted_at], map: "cards_deleted_at_index")
+  @@index([game_id], map: "cards_game_id_index")
+  @@index([like_count], map: "cards_like_count_index")
+  @@index([status], map: "cards_status_index")
+}
+
+model country_taxes {
+  id            Int      @id @default(autoincrement())
+  country       String   @db.VarChar(255)
+  tax           Float    @default(0)
+  tax_name      String   @db.VarChar(255)
+  is_eu         Boolean  @default(false)
+  customs_limit Float    @default(0)
+  currency      String   @db.VarChar(255)
+  active        Boolean  @default(false)
+  created_at    DateTime @default(now()) @db.Timestamp(0)
+  updated_at    DateTime @updatedAt @db.Timestamp(0)
+}
+
+model currency_rates {
+  id            BigInt   @id @default(autoincrement())
+  base_currency String   @db.VarChar(255)
+  rates         String   @db.Text
+  currency_date DateTime @default(now()) @db.Timestamp(0)
+  created_at    DateTime @default(now()) @db.Timestamp(0)
+  updated_at    DateTime @updatedAt @db.Timestamp(0)
+}
+
+model customers {
+  id         Int       @id @default(autoincrement())
+  email      String    @unique(map: "customers_email_unique") @db.VarChar(255)
+  first_name String    @db.VarChar(255)
+  last_name  String    @db.VarChar(255)
+  created_at DateTime  @default(now()) @db.Timestamp(0)
+  updated_at DateTime  @updatedAt @db.Timestamp(0)
+  deleted_at DateTime? @db.Timestamp(0)
+}
+
+model failed_jobs {
+  id         Int      @id @default(autoincrement())
+  uuid       String   @unique(map: "failed_jobs_uuid_unique") @db.VarChar(255)
+  connection String
+  queue      String
+  payload    String
+  exception  String
+  failed_at  DateTime @default(now()) @db.Timestamp(0)
+}
+
+model games {
+  id          Int       @id @default(autoincrement())
+  account_id  Int?
+  name        String    @db.VarChar(255)
+  description String?
+  type        Int       @default(0)
+  alias       String?   @db.VarChar(255)
+  status      Int       @default(1) @db.SmallInt
+  banner      String?   @db.VarChar(1500)
+  banner_link String?   @db.VarChar(1500)
+  created_at  DateTime  @default(now()) @db.Timestamp(0)
+  updated_at  DateTime  @updatedAt @db.Timestamp(0)
+  deleted_at  DateTime? @db.Timestamp(0)
+
+  @@index([account_id], map: "games_account_id_index")
+  @@index([alias], map: "games_alias_index")
+  @@index([created_at], map: "games_created_at_index")
+  @@index([deleted_at], map: "games_deleted_at_index")
+  @@index([status], map: "games_status_index")
+}
+
+model geoip2_location {
+  geoname_id             Int
+  locale_code            String
+  continent_code         String
+  continent_name         String
+  country_iso_code       String?
+  country_name           String?
+  subdivision_1_iso_code String?
+  subdivision_1_name     String?
+  subdivision_2_iso_code String?
+  subdivision_2_name     String?
+  city_name              String?
+  metro_code             Int?
+  time_zone              String?
+  is_in_european_union   Boolean
+  created_at             DateTime @default(now()) @db.Timestamp(0)
+  updated_at             DateTime @updatedAt @db.Timestamp(0)
+
+  @@id([geoname_id, locale_code])
+}
+
+model license_market {
+  id                Int      @id @default(autoincrement())
+  license_id        Int
+  shopify_market_id Int
+  created_at        DateTime @default(now()) @db.Timestamp(0)
+  updated_at        DateTime @updatedAt @db.Timestamp(0)
+}
+
+model licenses {
+  id                 Int               @id @default(autoincrement())
+  name               String            @unique(map: "licenses_name_unique") @db.VarChar(255)
+  created_at         DateTime          @default(now()) @db.Timestamp(0)
+  updated_at         DateTime          @updatedAt @db.Timestamp(0)
+  old_id             Int?
+  included_countries Json?             @db.Json
+  excluded_countries Json?             @db.Json
+  product_license    product_license[]
+}
+
+model market_catalog_markets {
+  shopify_market_id         Int             @id @default(autoincrement())
+  shopify_market_catalog_id Int
+  created_at                DateTime        @default(now()) @db.Timestamp(0)
+  updated_at                DateTime        @updatedAt @db.Timestamp(0)
+  market_catalogs           market_catalogs @relation(fields: [shopify_market_catalog_id], references: [shopify_market_catalog_id], onDelete: NoAction, onUpdate: NoAction, map: "market_catalog_markets_shopify_market_catalog_id_foreign")
+}
+
+model market_catalogs {
+  shopify_market_catalog_id Int                      @id @default(autoincrement())
+  title                     String                   @db.VarChar(255)
+  created_at                DateTime                 @default(now()) @db.Timestamp(0)
+  updated_at                DateTime                 @updatedAt @db.Timestamp(0)
+  market_catalog_markets    market_catalog_markets[]
+  publications              publications[]
+}
+
+model markets {
+  shopify_market_id Int      @id @default(autoincrement())
+  countries         Json     @db.Json
+  created_at        DateTime @default(now()) @db.Timestamp(0)
+  updated_at        DateTime @updatedAt @db.Timestamp(0)
+  name              String   @db.VarChar(255)
+}
+
+model product_license {
+  id                 Int      @id @default(autoincrement())
+  shopify_product_id Int      @unique(map: "product_license_shopify_product_id_unique")
+  license_id         Int
+  created_at         DateTime @default(now()) @db.Timestamp(0)
+  updated_at         DateTime @updatedAt @db.Timestamp(0)
+  licenses           licenses @relation(fields: [license_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "product_license_license_id_foreign")
+
+  @@index([shopify_product_id, license_id], map: "product_license_shopify_product_id_license_id_index")
+}
+
+model product_variant_custom_images {
+  id                 Int      @id @default(autoincrement())
+  shopify_product_id Int
+  shopify_variant_id Int
+  shopify_image_id   Int
+  position           Int      @default(0)
+  image_src          String   @db.VarChar(255)
+  created_at         DateTime @default(now()) @db.Timestamp(0)
+  updated_at         DateTime @updatedAt @db.Timestamp(0)
+
+  @@index([shopify_product_id], map: "product_variant_custom_images_shopify_product_id_index")
+  @@index([shopify_variant_id], map: "product_variant_custom_images_shopify_variant_id_index")
+}
+
+model publication_products {
+  id                     Int          @id @default(autoincrement())
+  shopify_publication_id Int
+  shopify_product_id     Int
+  created_at             DateTime     @default(now()) @db.Timestamp(0)
+  updated_at             DateTime     @updatedAt @db.Timestamp(0)
+  publications           publications @relation(fields: [shopify_publication_id], references: [shopify_publication_id], onDelete: NoAction, onUpdate: NoAction, map: "publication_products_shopify_publication_id_foreign")
+}
+
+model publications {
+  shopify_publication_id    Int                    @id @default(autoincrement())
+  shopify_market_catalog_id Int
+  created_at                DateTime               @default(now()) @db.Timestamp(0)
+  updated_at                DateTime               @updatedAt @db.Timestamp(0)
+  publication_products      publication_products[]
+  market_catalogs           market_catalogs        @relation(fields: [shopify_market_catalog_id], references: [shopify_market_catalog_id], onDelete: NoAction, onUpdate: NoAction, map: "publications_shopify_market_catalog_id_foreign")
+}
+
+model session {
+  id                  String    @id
+  shop                String
+  state               String
+  isOnline            Boolean   @default(false)
+  scope               String?
+  expires             DateTime?
+  accessToken         String
+  userId              Int?
+  firstName           String?
+  lastName            String?
+  email               String?
+  accountOwner        Boolean   @default(false)
+  locale              String?
+  collaborator        Boolean?  @default(false)
+  emailVerified       Boolean?  @default(false)
+  refreshToken        String
+  refreshTokenExpires DateTime  @default(now()) @db.Timestamp(0)
+  created_at          DateTime  @default(now()) @db.Timestamp(0)
+  updated_at          DateTime  @updatedAt @db.Timestamp(0)
+}

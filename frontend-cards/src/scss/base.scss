@@ -1,0 +1,369 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgb(0, 0, 0);
+  background-color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/*body {*/
+/*  margin: 0;*/
+/*  display: flex;*/
+/*  place-items: center;*/
+/*  min-width: 320px;*/
+/*  min-height: 100vh;*/
+/*}*/
+
+h1 {
+  font-size: 2.2em;
+  line-height: 1.1;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.ant-btn-primary, .ant-btn-primary:hover {
+  background: rgb(35, 177, 146);
+  border-color: rgb(35, 177, 146);
+  color: #fff;
+  font-weight: 600;
+}
+
+.login-button {
+  background: rgb(35, 177, 146) !important;
+}
+
+/*** CASTING SHADOW ***/
+.cc-casting-shadows {
+
+  padding: 0;
+
+  $font_family: 'Katahdin Round', sans-serif;
+  //font-family: 'Katahdin Round', sans-serif;
+
+  h1 {
+    color: #592965;
+    font-family: $font_family;
+  }
+  .ant-btn,
+  .ant-btn:hover {
+    color: #000;
+    padding: 1.2rem 0.8rem;
+    //font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-color: #d9d9d9;
+    font-family: $font_family;
+  }
+
+  .ant-btn-primary, .ant-btn-primary:hover {
+    background-color: #592965;
+    border-color: #592965;
+    color: #fff;
+    font-family: $font_family;
+  }
+
+  .ant-select-selector {
+    border-color: #d9d9d9 !important;
+  }
+
+  .card-buttons {
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 2em 0;
+  }
+
+  .cs-image-selection-wrapper{
+    text-align: left;
+  }
+
+  .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #000000;
+  }
+  .ant-tabs .ant-tabs-tab {
+    color: #000000;
+    :active {
+      color: #000000;
+    }
+  }
+  .ant-tabs .ant-tabs-ink-bar {
+    background: #000000;
+  }
+
+  .casting-shadows-artworks-img-list {
+    max-height: 300px;
+    overflow-y: scroll;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .popular-cards-section {
+    color: #7c7572;
+  }
+
+  .casting-shadows-upload-block {
+    .ant-upload-select {
+      margin: 0 auto;
+    }
+    .casting-shadows-upload-desc {
+      text-align: center;
+    }
+  }
+
+  .casting-shadows-artworks {
+    padding: 4px;
+    margin: 3px;
+    background-color: white;
+    display: inline-block;
+    width: CALC(33% - 13px);
+    .img-thumb {
+      max-width: CALC(50% - 4px);
+      padding: 2px;
+      vertical-align: middle;
+      border-style: none;
+    }
+  }
+  .casting-shadows-artworks.selected {
+    border: 4px solid #5F2969;
+    padding: 0;
+  }
+  .ant-upload-wrapper {
+    text-align: center;
+  }
+
+  .card-details--desc {
+    text-align: left;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .cc-casting-shadows {
+    .casting-shadows-artworks {
+      width: CALC(50% - 15px);
+    }
+  }
+}
+
+
+/*** HERE TO SLAY ***/
+.hts-here-to-slay {
+
+  padding: 0;
+
+  $font_family: 'Patua One',sans-serif;
+  //font-family: 'Patua One',sans-serif;
+
+  h1 {
+    color: #1F2736;
+    font-family: $font_family;
+  }
+  .ant-btn,
+  .ant-btn:hover {
+    color: #000;
+    padding: 1.2rem 0.8rem;
+    //font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-color: #d9d9d9;
+    font-family: $font_family;
+  }
+
+  .ant-btn-primary, .ant-btn-primary:hover {
+    background-color: #1F2736;
+    border-color: #1F2736;
+    color: #fff;
+    font-family: $font_family;
+  }
+
+  .ant-select-selector {
+    border-color: #d9d9d9 !important;
+  }
+
+  .card-buttons{
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 2em 0;
+  }
+
+  .cs-image-selection-wrapper {
+    text-align: left;
+  }
+
+  .hts-image-selection-wrapper{
+    text-align: left;
+  }
+
+  .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #000000;
+  }
+  .ant-tabs .ant-tabs-tab {
+    color: #000000;
+    :active {
+      color: #000000;
+    }
+  }
+  .ant-tabs .ant-tabs-ink-bar {
+    background: #000000;
+  }
+
+  .popular-card-details p {
+    color: #7c7572;
+  }
+
+  .popular-cards-section {
+    color: #7c7572;
+  }
+
+  .hts-artworks-img-list {
+    max-height: 300px;
+    overflow-y: scroll;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .hts-upload-block {
+    .ant-upload-select {
+      margin: 0 auto;
+    }
+    .hts-upload-desc{
+      text-align: center;
+    }
+  }
+
+  .hts-artworks {
+    margin: 3px;
+    //display: inline-block;
+
+    //width: CALC(33% - 12px);
+    .img-thumb {
+      max-width: 83px;
+      padding: 4px;
+      height: auto;
+      //max-width: CALC(50% - 4px);
+      //padding: 2px;
+      //vertical-align: middle;
+      //border-style: none;
+    }
+  }
+  .hts-artworks.selected {
+    border: 4px solid #1F2736;
+    padding: 0;
+  }
+  .ant-upload-wrapper {
+    text-align: center;
+  }
+
+  .hts-hint-message {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.45em;
+    color: #6b7073;
+    text-align: justify;
+    padding: 10px;
+  }
+
+  .hts-hint-message-hidden {
+    display: none;
+  }
+
+  .card-image {
+    max-width: 300px;
+  }
+
+  .hts-card-name {
+    color: #7c7572;
+    font-size: 18px;
+    text-transform: none;
+    text-align: center;
+  }
+
+  .hts-character-class {
+    text-align: center;
+    margin-top: .25rem;
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .hts-character-class.druid {
+    color: #00a88f;
+  }
+
+  .hts-character-class.guardian {
+    color: #eba900;
+  }
+
+  .hts-character-class.thief {
+    color: #004987;
+  }
+
+  .hts-character-class.fighter {
+    color: #96262c;
+  }
+
+  .hts-character-class.wizard {
+    color: #73308a;
+  }
+
+  .hts-character-class.bard {
+    color: #c25131;
+  }
+
+  .hts-character-class.ranger {
+    color: #225d38;
+  }
+
+  .hts-character-class.warrior {
+    color: #5d6eb2;
+  }
+
+  .hts-character-class-icon {
+    width: 25px;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+    margin-right: 7px;
+  }
+}

@@ -1,0 +1,606 @@
+@import"https://fonts.cdnfonts.com/css/katahdin-round";
+@import"https://fonts.cdnfonts.com/css/patua-one";
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center
+}
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter .3s
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa)
+}
+
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa)
+}
+
+@keyframes logo-spin {
+    0% {
+        transform: rotate(0)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear
+    }
+}
+
+.card {
+    padding: 2em
+}
+
+.read-the-docs {
+    color: #888
+}
+
+.ug-cards :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: #000;
+    background-color: #fff;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.ug-cards a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit
+}
+
+.ug-cards a:hover {
+    color: #535bf2
+}
+
+.ug-cards h1 {
+    font-size: 2.2em;
+    line-height: 1.1
+}
+
+@media (prefers-color-scheme: light) {
+    .ug-cards :root {
+        color: #213547;
+        background-color: #fff
+    }
+
+    .ug-cards a:hover {
+        color: #747bff
+    }
+
+    .ug-cards button {
+        background-color: #f9f9f9
+    }
+}
+
+.ug-cards .ant-btn-primary,
+.ug-cards .ant-btn-primary:hover {
+    background: #23b192;
+    border-color: #23b192;
+    color: #fff;
+    font-weight: 600
+}
+
+.ug-cards .login-button {
+    background: #23b192 !important
+}
+
+.ug-cards .cc-casting-shadows {
+    padding: 0
+}
+
+.ug-cards .cc-casting-shadows h1 {
+    color: #592965;
+    font-family: Katahdin Round, sans-serif
+}
+
+.ug-cards .cc-casting-shadows .ant-btn,
+.ug-cards .cc-casting-shadows .ant-btn:hover {
+    color: #000;
+    padding: 1.2rem .8rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-color: #d9d9d9;
+    font-family: Katahdin Round, sans-serif
+}
+
+.ug-cards .cc-casting-shadows .ant-btn-primary,
+.ug-cards .cc-casting-shadows .ant-btn-primary:hover {
+    background-color: #592965;
+    border-color: #592965;
+    color: #fff;
+    font-family: Katahdin Round, sans-serif
+}
+
+.ug-cards .cc-casting-shadows .ant-select-selector {
+    border-color: #d9d9d9 !important
+}
+
+.ug-cards .cc-casting-shadows .card-buttons {
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 2em 0
+}
+
+.ug-cards .cc-casting-shadows .cs-image-selection-wrapper {
+    text-align: left
+}
+
+.ug-cards .cc-casting-shadows .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
+.ug-cards .cc-casting-shadows .ant-tabs .ant-tabs-tab,
+.ug-cards .cc-casting-shadows .ant-tabs .ant-tabs-tab :active {
+    color: #000
+}
+
+.ug-cards .cc-casting-shadows .ant-tabs .ant-tabs-ink-bar {
+    background: #000
+}
+
+.ug-cards .cc-casting-shadows .casting-shadows-artworks-img-list {
+    max-height: 300px;
+    overflow-y: scroll;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap
+}
+
+.ug-cards .cc-casting-shadows .popular-cards-section {
+    color: #7c7572
+}
+
+.ug-cards .cc-casting-shadows .casting-shadows-upload-block .ant-upload-select {
+    margin: 0 auto
+}
+
+.ug-cards .cc-casting-shadows .casting-shadows-upload-block .casting-shadows-upload-desc {
+    text-align: center
+}
+
+.ug-cards .cc-casting-shadows .casting-shadows-artworks {
+    padding: 4px;
+    margin: 3px;
+    background-color: #fff;
+    display: inline-block;
+    width: calc(33% - 13px)
+}
+
+.ug-cards .cc-casting-shadows .casting-shadows-artworks .img-thumb {
+    max-width: calc(50% - 4px);
+    padding: 2px;
+    vertical-align: middle;
+    border-style: none
+}
+
+.ug-cards .cc-casting-shadows .casting-shadows-artworks.selected {
+    border: 4px solid #5F2969;
+    padding: 0
+}
+
+.ug-cards .cc-casting-shadows .ant-upload-wrapper {
+    text-align: center
+}
+
+.ug-cards .cc-casting-shadows .card-details--desc {
+    text-align: left
+}
+
+@media (max-width: 575.98px) {
+    .ug-cards .cc-casting-shadows .casting-shadows-artworks {
+        width: calc(50% - 15px)
+    }
+}
+
+.ug-cards .hts-here-to-slay {
+    padding: 0
+}
+
+.ug-cards .hts-here-to-slay h1 {
+    color: #1f2736;
+    font-family: Patua One, sans-serif
+}
+
+.ug-cards .hts-here-to-slay .ant-btn,
+.ug-cards .hts-here-to-slay .ant-btn:hover {
+    color: #000;
+    padding: 1.2rem .8rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-color: #d9d9d9;
+    font-family: Patua One, sans-serif
+}
+
+.ug-cards .hts-here-to-slay .ant-btn-primary,
+.ug-cards .hts-here-to-slay .ant-btn-primary:hover {
+    background-color: #1f2736;
+    border-color: #1f2736;
+    color: #fff;
+    font-family: Patua One, sans-serif
+}
+
+.ug-cards .hts-here-to-slay .ant-select-selector {
+    border-color: #d9d9d9 !important
+}
+
+.ug-cards .hts-here-to-slay .card-buttons {
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 2em 0
+}
+
+.ug-cards .hts-here-to-slay .cs-image-selection-wrapper,
+.ug-cards .hts-here-to-slay .hts-image-selection-wrapper {
+    text-align: left
+}
+
+.ug-cards .hts-here-to-slay .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
+.ug-cards .hts-here-to-slay .ant-tabs .ant-tabs-tab,
+.ug-cards .hts-here-to-slay .ant-tabs .ant-tabs-tab :active {
+    color: #000
+}
+
+.ug-cards .hts-here-to-slay .ant-tabs .ant-tabs-ink-bar {
+    background: #000
+}
+
+.ug-cards .hts-here-to-slay .popular-card-details p,
+.ug-cards .hts-here-to-slay .popular-cards-section {
+    color: #7c7572
+}
+
+.ug-cards .hts-here-to-slay .hts-artworks-img-list {
+    max-height: 300px;
+    overflow-y: scroll;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap
+}
+
+.ug-cards .hts-here-to-slay .hts-upload-block .ant-upload-select {
+    margin: 0 auto
+}
+
+.ug-cards .hts-here-to-slay .hts-upload-block .hts-upload-desc {
+    text-align: center
+}
+
+.ug-cards .hts-here-to-slay .hts-artworks {
+    margin: 3px
+}
+
+.ug-cards .hts-here-to-slay .hts-artworks .img-thumb {
+    max-width: 83px;
+    padding: 4px;
+    height: auto
+}
+
+.ug-cards .hts-here-to-slay .hts-artworks.selected {
+    border: 4px solid #1F2736;
+    padding: 0
+}
+
+.ug-cards .hts-here-to-slay .ant-upload-wrapper {
+    text-align: center
+}
+
+.ug-cards .hts-here-to-slay .hts-hint-message {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+    font-family: Open Sans, sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.45em;
+    color: #6b7073;
+    text-align: justify;
+    padding: 10px
+}
+
+.ug-cards .hts-here-to-slay .hts-hint-message-hidden {
+    display: none
+}
+
+.ug-cards .hts-here-to-slay .card-image {
+    max-width: 300px
+}
+
+.ug-cards .hts-here-to-slay .hts-card-name {
+    color: #7c7572;
+    font-size: 18px;
+    text-transform: none;
+    text-align: center
+}
+
+.ug-cards .hts-here-to-slay .hts-character-class {
+    text-align: center;
+    margin-top: .25rem;
+    font-size: 16px;
+    font-weight: 800
+}
+
+.ug-cards .hts-here-to-slay .hts-character-class.druid {
+    color: #00a88f
+}
+
+.ug-cards .hts-here-to-slay .hts-character-class.guardian {
+    color: #eba900
+}
+
+.ug-cards .hts-here-to-slay .hts-character-class.thief {
+    color: #004987
+}
+
+.ug-cards .hts-here-to-slay .hts-character-class.fighter {
+    color: #96262c
+}
+
+.ug-cards .hts-here-to-slay .hts-character-class.wizard {
+    color: #73308a
+}
+
+.ug-cards .hts-here-to-slay .hts-character-class.bard {
+    color: #c25131
+}
+
+.ug-cards .hts-here-to-slay .hts-character-class.ranger {
+    color: #225d38
+}
+
+.ug-cards .hts-here-to-slay .hts-character-class.warrior {
+    color: #5d6eb2
+}
+
+.ug-cards .hts-here-to-slay .hts-character-class-icon {
+    width: 25px;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+    margin-right: 7px
+}
+
+.cs-thumb-modal .ant-btn,
+.cs-thumb-modal .ant-btn:hover,
+.hts-thumb-modal .ant-btn,
+.hts-thumb-modal .ant-btn:hover {
+    color: #000;
+    padding: 1.2rem .8rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-color: #d9d9d9
+}
+
+.cs-thumb-modal .ant-btn-primary,
+.cs-thumb-modal .ant-btn-primary:hover,
+.hts-thumb-modal .ant-btn-primary,
+.hts-thumb-modal .ant-btn-primary:hover {
+    background: #592965 !important;
+    border-color: #592965;
+    color: #fff
+}
+
+.hts-thumb-modal {
+    width: 400px !important
+}
+
+.hts-thumb-modal .ant-btn-primary,
+.hts-thumb-modal .ant-btn-primary:hover {
+    background: #1f2736 !important;
+    border-color: #1f2736;
+    color: #fff
+}
+
+.cs-crop-upload-ok-btn,
+.cs-crop-upload-ok-btn:hover {
+    background: #592965 !important;
+    border-color: #592965;
+    color: #fff;
+    padding: 1.2rem .8rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    text-transform: uppercase;
+    font-weight: 600
+}
+
+.cs-crop-upload-cancel-btn,
+.cs-crop-upload-cancel-btn:hover {
+    color: #000 !important;
+    padding: 1.2rem .8rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    text-transform: none;
+    font-weight: 400;
+    border: none !important;
+    box-shadow: none !important
+}
+
+.cc-casting-shadows {
+    padding: 20px
+}
+
+.cc-casting-shadows h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px
+}
+
+.casting-shadows.character-card {
+    overflow: hidden;
+    transition: all .3s;
+    margin: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    box-shadow: 2px 5px 5px #ced4da33;
+    background-color: #fff
+}
+
+.casting-shadows.character-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px #0003
+}
+
+.character-image {
+    padding: 0;
+    text-align: center;
+    background-color: #f7f7f7
+}
+
+.character-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 5px
+}
+
+.card-details {
+    text-align: left;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    color: #6b7073
+}
+
+.card-details p {
+    margin: 5px 0
+}
+
+.card-details--name {
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block
+}
+
+.card-details--desc {
+    font-weight: 400;
+    color: #555;
+    display: block;
+    text-align: center;
+    font-size: 11px
+}
+
+.character-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa;
+    border-top: 1px solid #e8e8e8;
+    color: #888;
+    padding: 8px 10px;
+    font-size: 12px
+}
+
+.character-footer .author {
+    font-weight: 700;
+    color: #666;
+    font-size: 12px
+}
+
+.loading-indicator {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px;
+    color: #888
+}
+
+.favorite {
+    font-weight: 700;
+    text-align: left;
+    font-size: 18px;
+    color: gray;
+    padding: 0 10px
+}
+
+.heart-action {
+    color: gray !important
+}
+
+.heart-action:hover {
+    color: #504e4e !important
+}
+
+.character-image {
+    position: relative;
+    padding: 0;
+    text-align: center;
+    background-color: #f7f7f7
+}
+
+.card-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px
+}
+
+.dials-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none
+}
+
+.bottom-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+.bottom-buttons .ant-btn {
+    background-color: #fff;
+    border: 2px solid #333;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: all .3s ease
+}
+
+.bottom-buttons .ant-btn:hover {
+    background-color: #333;
+    color: #fff;
+    border-color: #333
+}
+
+.bottom-buttons .ant-btn:first-child {
+    margin-right: 20px
+}
+
+.card-details--name,
+.card-details--ability {
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-flex
+}
