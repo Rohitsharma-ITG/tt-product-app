@@ -6,7 +6,6 @@ const routes = [
     // health route
     route("/api/health", "./api/controller/health.js"),
     route("/api/custom-restriction/*", "./api/controller/customRestriction.$.js"),
-    // route("/cards/*", "./routes/my-app-proxy.jsx"),
 ];
 
 export default routes;
